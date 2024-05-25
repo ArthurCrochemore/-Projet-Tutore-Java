@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox prefHeight="450" prefWidth="600"
+    xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="fr.univtours.polytech.punchingmanagement.controller.MainController"
+    id="mainView"
+    fx:id="root">
+   
+
+    <!-- Menu to open pages -->
+    <MenuBar fx:id="menuBar">
+        <menus>
+            <Menu text="_Menu">
+                <items>
+                    <MenuItem onAction="#handleMenuItemHome"
+                        text="_Home" />
+                    <MenuItem onAction="#handleButtonSave"
+                        text="_Save" />
+                    <MenuItem onAction="#handleMenuItemConsultAll"
+                        text="Consult _All" />
+                    <MenuItem onAction="#handleMenuItemConsultDay"
+                        text="Consult _Day" />
+                        
+                </items>
+            </Menu>
+            <Menu text="_Other">
+                <items>
+                    <MenuItem onAction="#handleMenuItemEmployeeList"
+                        text="_Employee List" />
+                    <MenuItem onAction="#handleMenuItemParameters"
+                        text="_Parameters" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+
+    <VBox fx:id="body" />
+</VBox>

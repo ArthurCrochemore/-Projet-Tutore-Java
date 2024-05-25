@@ -1,0 +1,15 @@
+# Build
+bin/
+target/
+
+# IDE
+.vscode/
+.metadata/
+.settings/
+.classpath
+.project
+
+# Other
+*.lock
+*.ser
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane prefHeight="400" prefWidth="520"
+    xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="fr.univtours.polytech.punchingmanagement.controller.crud.DepartmentReadController"
+    fx:id="root">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+
+    <center>
+        <GridPane hgap="10" vgap="10">
+            <children>
+                <Label text="UUID" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label text="Name" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label text="Number of employees" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+
+                <Button fx:id="uuid" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <tooltip><Tooltip text="Copy ID" /></tooltip>
+                </Button>
+                <Label fx:id="name" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label fx:id="numberOfEmployees" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            </children>
+        </GridPane>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="10" />
+            </padding>
+            <children>
+                <Button fx:id="editButton" text="Edit" />
+                <Button fx:id="deleteButton" text="Delete" />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

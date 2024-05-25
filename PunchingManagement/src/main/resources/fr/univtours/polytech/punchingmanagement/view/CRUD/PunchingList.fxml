@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.textfield.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.cell.*?>
+
+<BorderPane prefHeight="400" prefWidth="520"
+    xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="fr.univtours.polytech.punchingmanagement.controller.crud.PunchingListController"
+    fx:id="root">
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+
+    <center>
+        <TableView fx:id="view">
+            <columns>
+                <TableColumn text="Employee" fx:id="columnEmployee">
+                </TableColumn>
+                <TableColumn text="Date" fx:id="columnDate">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="date" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Time entry">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="entry" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Time exit">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="exit" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="10" />
+            </padding>
+            <children>
+                <Button fx:id="createButton" text="Create" />
+                <Button fx:id="readButton" text="Details" />
+                <Button fx:id="editButton" text="Edit" />
+                <Button fx:id="deleteButton" text="Delete" />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

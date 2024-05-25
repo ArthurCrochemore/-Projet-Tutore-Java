@@ -1,0 +1,28 @@
+--class-path
+'C:/Users/Jerome/.m2/repository/org/openjfx/javafx-controls/20.0.1/javafx-controls-20.0.1.jar;C:/Users/Jerome/.m2/repository/org/openjfx/javafx-graphics/20.0.1/javafx-graphics-20.0.1.jar;C:/Users/Jerome/.m2/repository/org/openjfx/javafx-base/20.0.1/javafx-base-20.0.1.jar;C:/Users/Jerome/.m2/repository/org/openjfx/javafx-fxml/20.0.1/javafx-fxml-20.0.1.jar'
+--module-path
+'M:/Code/Polytech/A3S6/S6ProjetJavaPunching/projet-tutore-java-S6/PunchingManagement/target/punchingmanagement-0.0.1-SNAPSHOT.jar;C:/Users/Jerome/.m2/repository/fr/univtours/polytech/punchingcommon/0.0.1-SNAPSHOT/punchingcommon-0.0.1-SNAPSHOT.jar;C:/Users/Jerome/.m2/repository/org/openjfx/javafx-graphics/20.0.1/javafx-graphics-20.0.1-win.jar;C:/Users/Jerome/.m2/repository/org/openjfx/javafx-fxml/20.0.1/javafx-fxml-20.0.1-win.jar;C:/Users/Jerome/.m2/repository/org/openjfx/javafx-controls/20.0.1/javafx-controls-20.0.1-win.jar;C:/Users/Jerome/.m2/repository/org/openjfx/javafx-base/20.0.1/javafx-base-20.0.1-win.jar'
+--patch-module
+PunchingManagement='M:/Code/Polytech/A3S6/S6ProjetJavaPunching/projet-tutore-java-S6/PunchingManagement/src/main/java;M:/Code/Polytech/A3S6/S6ProjetJavaPunching/projet-tutore-java-S6/PunchingManagement/target/generated-sources/annotations'
+-encoding
+'UTF-8'
+-protected
+--release
+17
+--module-source-path
+'M:/Code/Polytech/A3S6/S6ProjetJavaPunching/projet-tutore-java-S6/PunchingManagement/target/apidocs/src'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'M:/Code/Polytech/A3S6/S6ProjetJavaPunching/projet-tutore-java-S6/PunchingManagement/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Punching Management 0.0.1-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'Punching Management 0.0.1-SNAPSHOT API'

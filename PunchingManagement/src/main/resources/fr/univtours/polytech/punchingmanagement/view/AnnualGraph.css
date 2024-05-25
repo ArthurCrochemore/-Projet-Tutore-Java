@@ -1,0 +1,17 @@
+
+
+.day {
+    -fx-padding: 5px;
+    -fx-stroke: black;
+    -fx-stroke-width: 1px;
+
+}
+
+#gridGraph {
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+
+    -fx-background-color: #fff3ce;
+    -fx-padding: 10px;
+}

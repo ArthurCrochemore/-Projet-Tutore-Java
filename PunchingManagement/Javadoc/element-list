@@ -1,0 +1,4 @@
+module:PunchingManagement
+fr.univtours.polytech.punchingmanagement
+fr.univtours.polytech.punchingmanagement.controller.communication
+fr.univtours.polytech.punchingmanagement.model

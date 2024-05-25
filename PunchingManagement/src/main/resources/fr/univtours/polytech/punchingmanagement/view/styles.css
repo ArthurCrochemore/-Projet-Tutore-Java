@@ -1,0 +1,27 @@
+#mainView {
+    /* root MainView.fxml */
+    -fx-background-color: #e0e0e0;
+    -fx-background-image: url("../images/background.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+.button {
+    -fx-font-weight: bold;
+
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane>.viewport {
+    -fx-background-color: transparent;
+}
+
+#title {
+    -fx-font-size: 20px;
+    -fx-padding: 10px;
+    -fx-wrap-text: true;
+}

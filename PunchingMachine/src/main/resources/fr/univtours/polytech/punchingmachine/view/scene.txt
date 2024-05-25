@@ -1,0 +1,12 @@
+Exemple d'affichage de la fenêtre principale
+
+--------------------------------------------------------------------------------
+| Date : [date]     Heure : [heure]    Heure arrondie : [heure arrondie]     |
+|                                                                            |
+|ID: [id]                                                                    |
+|                                                                            |
+|Network connection : [IP] [port]                                            |
+|                                                                            |
+|                     Bouton: CHECK IN/OUT                                   |
+|                                                                            |
+--------------------------------------------------------------------------------

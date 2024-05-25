@@ -1,0 +1,87 @@
+@startuml View Main Application
+skinparam groupInheritance 2
+
+package view {
+    class ViewApplication
+    class ViewParameters {
+        port: int
+    }
+    class ViewConsultAll
+    class ViewConsultDay
+
+    ' CRUD (LCRUD)
+    package CRUD {
+        abstract class ViewCRUDListAbstract
+        abstract class ViewCRUDCreateAbstract
+        abstract class ViewCRUDDetailsAbstract
+        abstract class ViewCRUDUpdateAbstract
+        abstract class ViewCRUDDeleteAbstract
+    }
+
+    package department {
+        class ViewDepartmentList
+        class ViewDepartmentCreate
+        class ViewDepartmentDetails
+        class ViewDepartmentUpdate
+        class ViewDepartmentDelete
+    }
+
+    package employee {    
+        class ViewEmployeeList
+        class ViewEmployeeCreate
+        class ViewEmployeeDetails
+        class ViewEmployeeUpdate
+        class ViewEmployeeDelete
+    }
+
+    package punching {
+        class ViewPunchingList
+        class ViewPunchingCreate
+        class ViewPunchingDetails
+        class ViewPunchingUpdate
+        class ViewPunchingDelete
+    }
+
+    ' extends from CRUD
+    ViewDepartmentList -----|> ViewCRUDListAbstract
+    ViewEmployeeList -----|> ViewCRUDListAbstract
+    ViewPunchingList -----|> ViewCRUDListAbstract
+    ViewDepartmentCreate -----|> ViewCRUDCreateAbstract
+    ViewEmployeeCreate -----|> ViewCRUDCreateAbstract
+    ViewPunchingCreate -----|> ViewCRUDCreateAbstract
+    ViewDepartmentDetails -----|> ViewCRUDDetailsAbstract
+    ViewEmployeeDetails -----|> ViewCRUDDetailsAbstract
+    ViewPunchingDetails -----|> ViewCRUDDetailsAbstract
+    ViewDepartmentUpdate -----|> ViewCRUDUpdateAbstract
+    ViewEmployeeUpdate -----|> ViewCRUDUpdateAbstract
+    ViewPunchingUpdate -----|> ViewCRUDUpdateAbstract
+    ViewDepartmentDelete -----|> ViewCRUDDeleteAbstract
+    ViewEmployeeDelete -----|> ViewCRUDDeleteAbstract
+    ViewPunchingDelete -----|> ViewCRUDDeleteAbstract
+
+
+    ' going from one view to another
+    ViewApplication --> ViewParameters
+    ViewApplication --> ViewConsultAll
+    ViewApplication --> ViewConsultDay
+    ViewApplication ----> ViewDepartmentList
+    ViewApplication ----> ViewEmployeeList
+    ViewApplication ----> ViewPunchingList
+
+    ViewDepartmentList ---> ViewDepartmentCreate
+    ViewDepartmentList ---> ViewDepartmentDetails
+    ViewDepartmentList ---> ViewDepartmentUpdate
+    ViewDepartmentList ---> ViewDepartmentDelete
+    ViewEmployeeList ---> ViewEmployeeCreate
+    ViewEmployeeList ---> ViewEmployeeDetails
+    ViewEmployeeList ---> ViewEmployeeUpdate
+    ViewEmployeeList ---> ViewEmployeeDelete
+    ViewPunchingList ---> ViewPunchingCreate
+    ViewPunchingList ---> ViewPunchingDetails
+    ViewPunchingList ---> ViewPunchingUpdate
+    ViewPunchingList ---> ViewPunchingDelete
+
+    ViewConsultDay -----> ViewPunchingDetails
+    ViewConsultAll -----> ViewPunchingDetails
+}
+@enduml

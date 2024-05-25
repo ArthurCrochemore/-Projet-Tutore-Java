@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.textfield.*?>
+<?import java.net.URL?>
+
+<!-- A graph with 365 days -->
+<!-- The days are represented with 7 rows and 52 columns, each column is a week -->
+<!-- The rows represents the day of the week, starting by Monday -->
+<!-- The day is a colored cell -->
+<ScrollPane fitToWidth="true" fitToHeight="true"
+    xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="fr.univtours.polytech.punchingmanagement.controller.ConsultDayController">
+    <content>
+        <HBox alignment="center">
+            <children>
+                <VBox fx:id="root" alignment="center" fillWidth="false">
+                    <children>
+                        <Label id="title" text="Weekly Schedule" />
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </content>
+    <stylesheets>
+        <URL value="@AnnualGraph.css" />
+        <URL value="@ConsultDay.css" />
+    </stylesheets>
+</ScrollPane>

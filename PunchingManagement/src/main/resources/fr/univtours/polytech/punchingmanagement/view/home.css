@@ -1,0 +1,37 @@
+#homeButtons .button {
+    -fx-border-width: 4px;
+    -fx-border-radius: 10px;
+
+    -fx-background: transparent;
+    -fx-min-height: 100px;
+    -fx-height: 100%;
+
+    -fx-padding: 10px;
+
+    -fx-background-color: transparent;
+}
+
+#homeButtons .button:hover {
+    -fx-background-color: rgba(127, 127, 127, 0.5);
+    -fx-background-radius: 20px;
+}
+
+.button#buttonConsultAll {
+    -fx-border-color: #ff0000;
+}
+
+.button#buttonConsultDay {
+    -fx-border-color: #00ff00;
+}
+
+.button#buttonEmployeeList,
+.button#buttonDepartmentList,
+.button#buttonPunchingList {
+    -fx-border-color: #0000ff;
+}
+
+#homeButtons {
+    -fx-alignment: center;
+    /* FlowPane : add space arround */
+    -fx-hgap: 10;
+}

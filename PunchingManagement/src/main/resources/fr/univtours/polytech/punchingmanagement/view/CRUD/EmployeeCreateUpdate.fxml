@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane prefHeight="400" prefWidth="520"
+    xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="fr.univtours.polytech.punchingmanagement.controller.crud.EmployeeCreateUpdateController"
+    fx:id="root">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+
+    <center>
+        <GridPane fx:id="gridPane" hgap="10" vgap="10">
+            <children>
+                <Label text="UUID" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label text="First name" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label text="Name" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label text="Date of Employment" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <Label text="Department" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <Label text="Schedule" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+
+                <Label fx:id="uuid" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="firstname" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="lastname" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <DatePicker fx:id="dateOfEmployment" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <ComboBox fx:id="department" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                <GridPane fx:id="gridSchedule" hgap="10" vgap="10"
+                    GridPane.columnIndex="1" GridPane.rowIndex="6"
+                    GridPane.columnSpan="1" GridPane.rowSpan="7">
+                    <children>
+                        <Label text="Monday" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Label text="Tuesday" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Wednesday" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Thursday" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Friday" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="Saturday" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label text="Sunday" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                        <Label text="Start" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                        <Label text="Start" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label text="Start" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label text="Start" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Label text="Start" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Label text="Start" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <Label text="Start" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+
+                        <Label text="End" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                        <Label text="End" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <Label text="End" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <Label text="End" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                        <Label text="End" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                        <Label text="End" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                        <Label text="End" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                    </children>
+                </GridPane>
+            </children>
+        </GridPane>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="10" />
+            </padding>
+            <children>
+                <Button fx:id="okButton" text="Create" />
+                <Button fx:id="cancelButton" text="Cancel" />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

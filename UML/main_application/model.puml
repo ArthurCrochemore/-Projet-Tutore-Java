@@ -1,0 +1,53 @@
+@startuml Model Main Application
+
+package controller {
+    class ControllerManager {}
+    note right: Controller, Singleton
+}
+
+package model {
+    class Company {}
+
+    class Department {
+        departmentUUID: UUID
+        name: string
+    }
+
+    class User {
+        userUUID: UUID
+        firstname: string
+        name: string
+    }
+
+    class Employee  {
+        employmentDate: LocalDate
+        resetTime: LocalDateTime
+    }
+
+    class PunchingDay {
+        date: LocalDate
+        entry: LocalTime
+        exit: LocalTime
+    }
+
+    class WeeklySchedule {
+    }
+
+    class TheoreticalHours {
+        entry: LocalTime
+        exit: LocalTime
+    }
+
+    ' Links
+    User <|-- Employee
+    ControllerManager "1" *-- "1" Company : company
+    Company "1" *-- "*" Employee : employees
+    Company "1" *-- "*" Department : departments
+    Company "1" *--- "*" PunchingDay : history
+    Employee "1" -> "*" Department : "departmentUUID"
+    Employee "*" <--- "1" PunchingDay : "employeeUUID"
+    Employee "1" --- "1" WeeklySchedule : "weeklySchedule\nuserUUID\t     "
+    WeeklySchedule "1" *-- "7" TheoreticalHours : daysOfWeek
+}
+
+@enduml

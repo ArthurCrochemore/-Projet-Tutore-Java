@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.textfield.*?>
+<?import java.net.URL?>
+
+<VBox
+    xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="fr.univtours.polytech.punchingmanagement.controller.HomeController"
+    fx:id="root"
+    id="homeView"
+    alignment="center"
+    prefHeight="450" prefWidth="600">
+
+    <children>
+        <Label id="title" text="Punching Management" />
+
+        <FlowPane id="homeButtons">
+            <Button id="buttonConsultAll" onAction="#handleButtonConsultAll">Consult All</Button>
+            <Button id="buttonConsultDay" onAction="#handleButtonConsultDay">Consult Day</Button>
+            <Button id="buttonEmployeeList" onAction="#handleButtonEmployeeList">Employee List</Button>
+            <Button id="buttonDepartmentList" onAction="#handleButtonDepartmentList">Department List</Button>
+            <Button id="buttonPunchingList" onAction="#handleButtonPunchingList">Punching List</Button>
+        </FlowPane>
+
+    </children>
+    <stylesheets>
+        <URL value="@home.css" />
+    </stylesheets>
+</VBox>

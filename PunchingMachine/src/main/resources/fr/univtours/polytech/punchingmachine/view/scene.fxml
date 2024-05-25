@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="491.0" prefWidth="681.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.univtours.polytech.punchingmachine.controller.FXMLController">
+    <TabPane accessibleRole="BUTTON" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="768.0" styleClass="label" stylesheets="@styles.css" tabClosingPolicy="UNAVAILABLE" tabMinHeight="12.0" tabMinWidth="100.0">
+        <tabs>
+            <!-- Onglet Home -->
+            <Tab text="Home">
+                <content>
+                    <VBox alignment="CENTER" prefHeight="471.0" prefWidth="738.0" spacing="10" style="-fx-background-color: rgb(240,240,240) rgb(230,50,240);" stylesheets="@styles.css"
+                        fillWidth="false">
+                        <children>
+                     <Text strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="0.0" text="Punching Machine" textAlignment="CENTER" underline="true" wrappingWidth="510.49284172058105">
+                        <font>
+                           <Font name="Gill Sans Nova Bold" size="36.0" />
+                        </font>
+                        <fill>
+                           <LinearGradient endX="0.3470031666078777" endY="0.8138801186618744" startX="0.3470031666078778" startY="0.36593061140283045">
+                              <stops>
+                                 <Stop>
+                                    <color>
+                                       <Color red="0.2169022113084793" green="0.18307343125343323" blue="0.859649121761322" />
+                                    </color>
+                                 </Stop>
+                                 <Stop offset="1.0">
+                                    <color>
+                                       <Color red="0.11029889434576035" green="0.12280701845884323" blue="0.10575048625469208" />
+                                    </color>
+                                 </Stop>
+                              </stops>
+                           </LinearGradient>
+                        </fill>
+                     </Text>
+                     <Line endX="73.73807525634766" endY="-0.51639324426651" startX="-676.2215576171875" startY="-0.5161218047142029" />
+                            <!-- En-tête avec les informations -->
+                            <AnchorPane prefHeight="58.0" prefWidth="672.0" style="-fx-background-color: rgb(250,250,255);" styleClass="text-field">
+                                <children>
+                                    <!-- Label pour afficher la date et l'heure -->
+                                    <Label fx:id="dateLabel" layoutX="100.0" layoutY="4.0" />
+            
+                                    <!-- Label Heure -->
+                                    <Label fx:id="hourLabel" layoutX="150.0" layoutY="24.0" />
+            
+                                    <!-- Label Heure arrondie -->
+                                    <Label fx:id="roundedHourLabel" layoutX="304.0" layoutY="24.0" textFill="#c08e8e" />
+
+                                    <!-- Label pour garder la largeur -->
+                                    <Label layoutX="550.0" layoutY="0" text=" " />
+                                </children>
+                        <effect>
+                           <DropShadow height="3.48" radius="8.54" spread="0.37" width="32.68">
+                              <color>
+                                 <Color red="0.07228720188140869" green="0.1313217431306839" blue="0.780701756477356" />
+                              </color>
+                           </DropShadow>
+                        </effect>
+                            </AnchorPane>
+                            <Line endX="85.4213638305664" endY="1.2998926639556885" startX="-674.5382690429688" startY="1.2998614311218262" />
+
+                            <Label fx:id="idLabel" text="ID" textFill="#c08e8e" />
+
+                            <TextField fx:id="uuidField" onDragDropped="#handleDragDropped" onDragExited="#handleDragExited" onDragOver="#handleDragOver"
+                                    promptText="Enter your ID or drop your ID card"
+                                    minWidth="300.0">
+                                <font>
+                                    <Font name="Arial Nova Light" size="12.0" />
+                                </font>
+                            </TextField>
+            
+                            <!-- Bouton Check In/Out -->
+                            <Button fx:id="checkButton" mnemonicParsing="false" onAction="#handleButtonCheck" prefHeight="39.0" prefWidth="306.0" text="Check In/Out" />
+            
+                        </children>
+                  <effect>
+                     <Blend mode="MULTIPLY" />
+                  </effect>
+                    </VBox>
+                </content>
+            </Tab>
+            <!-- Onglet Settings -->
+            <Tab text="Settings">
+                <content>
+                    <AnchorPane accessibleRole="CHECK_BOX" depthTest="DISABLE" minHeight="0.0" minWidth="0.0" prefHeight="281.0" prefWidth="463.0" style="-fx-background-color: rgb(240,240,240) rgb(230,50,240);" stylesheets="@styles.css">
+                        <children>
+                            <TextField fx:id="ipField" layoutX="277.0" layoutY="90.0" prefHeight="31.0" prefWidth="209.0" promptText="IP" />
+                            <TextField fx:id="portField" layoutX="277.0" layoutY="146.0" prefHeight="31.0" prefWidth="482.0" promptText="Port" />
+                            <CubicCurve controlX1="56.30878829956055" controlX2="0.3088124692440033" controlY1="8.3087797164917" controlY2="8.30880069732666" endX="161.16668701171875" endY="9.5367431640625E-6" fill="DODGERBLUE" layoutX="350.0" layoutY="30.0" startX="-98.83331298828125" startY="9.5367431640625E-6" stroke="BLACK" />
+                            <Line endX="619.0000610351562" endY="-3.0517578125E-5" layoutX="136.0" layoutY="213.0" startX="-130.5" startY="-1.52587890625E-5" />
+                            <Label fx:id="ipPunchingMachineLabel" layoutX="277.0" layoutY="274.0" prefHeight="84.0" prefWidth="259.0" style="-fx-background-color: rgb(240,230,250);" text="IP Address:">
+                                <textFill>
+                                <LinearGradient endX="0.3470031666078777" endY="0.8138801186618744" startX="0.3470031666078778" startY="0.36593061140283045">
+                                    <stops>
+                                        <Stop>
+                                            <color>
+                                            <Color red="0.2169022113084793" green="0.18307343125343323" blue="0.859649121761322" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="0.7396055000818464">
+                                            <color>
+                                            <Color red="0.6800000071525574" green="0.6800000071525574" blue="0.6800000071525574" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="1.0">
+                                            <color>
+                                            <Color red="0.11029889434576035" green="0.12280701845884323" blue="0.10575048625469208" />
+                                            </color>
+                                        </Stop>
+                                    </stops>
+                                </LinearGradient>
+                                </textFill>
+                                <effect>
+                                    <Blend />
+                                </effect>
+                                <styleClass>
+                                    <String fx:value="v-box" />
+                                    <String fx:value="text-field" />
+                                </styleClass>
+                            </Label>
+                            <Text layoutX="112.0" layoutY="20.0" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="0.0" text="Network Configuration" textAlignment="CENTER" underline="true" wrappingWidth="510.49284172058105">
+                                <font>
+                                <Font name="Gill Sans Nova Bold" size="18.0" />
+                                </font>
+                                <fill>
+                                <LinearGradient endX="0.3470031666078777" endY="0.8138801186618744" startX="0.3470031666078778" startY="0.36593061140283045">
+                                    <stops>
+                                        <Stop>
+                                            <color>
+                                            <Color red="0.2169022113084793" green="0.18307343125343323" blue="0.859649121761322" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="1.0">
+                                            <color>
+                                            <Color red="0.11029889434576035" green="0.12280701845884323" blue="0.10575048625469208" />
+                                            </color>
+                                        </Stop>
+                                    </stops>
+                                </LinearGradient>
+                                </fill>
+                            </Text>
+                            <Text layoutY="76.0" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the server information..." textAlignment="CENTER" wrappingWidth="246.49285697937012">
+                                <font>
+                                <Font name="Gill Sans Nova Bold" size="14.0" />
+                                </font>
+                                <fill>
+                                <LinearGradient endX="0.372239753650942" endY="0.8075709764137629" proportional="false" startX="0.4921136007700057" startY="0.6908517350157728">
+                                    <stops>
+                                        <Stop>
+                                            <color>
+                                            <Color red="0.2169022113084793" green="0.18307343125343323" blue="0.859649121761322" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="1.0">
+                                            <color>
+                                            <Color red="0.11029889434576035" green="0.12280701845884323" blue="0.10575048625469208" />
+                                            </color>
+                                        </Stop>
+                                    </stops>
+                                </LinearGradient>
+                                </fill>
+                            </Text>
+                            <Text layoutX="12.0" layoutY="240.0" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="0.0" text="Punching Machine Information:" textAlignment="CENTER" wrappingWidth="226.492826461792">
+                                <font>
+                                <Font name="Gill Sans Nova Bold" size="14.0" />
+                                </font>
+                                <fill>
+                                <LinearGradient endX="0.372239753650942" endY="0.8075709764137629" proportional="false" startX="0.4921136007700057" startY="0.6908517350157728">
+                                    <stops>
+                                        <Stop>
+                                            <color>
+                                            <Color red="0.2169022113084793" green="0.18307343125343323" blue="0.859649121761322" />
+                                            </color>
+                                        </Stop>
+                                        <Stop offset="1.0">
+                                            <color>
+                                            <Color red="0.11029889434576035" green="0.12280701845884323" blue="0.10575048625469208" />
+                                            </color>
+                                        </Stop>
+                                    </stops>
+                                </LinearGradient>
+                                </fill>
+                            </Text>
+                        </children>
+                        <effect>
+                            <Blend mode="MULTIPLY" />
+                        </effect>
+                    </AnchorPane>
+                </content>
+            </Tab>
+
+
+        </tabs>
+    </TabPane>
+</AnchorPane>

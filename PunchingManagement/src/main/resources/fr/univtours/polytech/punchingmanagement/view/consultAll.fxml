@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.textfield.*?>
+<?import javafx.scene.shape.Rectangle?>
+<?import java.net.URL?>
+
+<ScrollPane fitToWidth="true" fitToHeight="true"
+    xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="fr.univtours.polytech.punchingmanagement.controller.ConsultAllController">
+    <content>
+        <VBox fx:id="root" alignment="center">
+            <children>
+                <Label id="title" text="Consult All" />
+
+                <!-- A legend for the hourly rate -->
+                <HBox alignment="center">
+                    <GridPane fx:id="legend" hgap="5" vgap="5" id="gridGraph">
+                        <children>
+                            <Label text="Legend Hourly rate :" GridPane.columnIndex="0" GridPane.rowIndex="0"
+                                GridPane.columnSpan="9" />
+                            <Label text="-4h" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                            <Label text="-3h" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            <Label text="-2h" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                            <Label text="-1h" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                            <Label text="0h" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                            <Label text="+1h" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                            <Label text="+2h" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                            <Label text="+3h" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                            <Label text="+4h" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+                            <Rectangle styleClass="day" width="10" height="10" fill="#FF0000" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                            <Rectangle styleClass="day" width="10" height="10" fill="#FF3F3F" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                            <Rectangle styleClass="day" width="10" height="10" fill="#FF7F7F" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                            <Rectangle styleClass="day" width="10" height="10" fill="#FFBFBF" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                            <Rectangle styleClass="day" width="10" height="10" fill="#FFFFFF" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                            <Rectangle styleClass="day" width="10" height="10" fill="#BFFFBF" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                            <Rectangle styleClass="day" width="10" height="10" fill="#7FFF7F" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                            <Rectangle styleClass="day" width="10" height="10" fill="#3FFF3F" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                            <Rectangle styleClass="day" width="10" height="10" fill="#00FF00" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+                        </children>
+                    </GridPane>
+                </HBox>
+
+
+            </children>
+        </VBox>
+    </content>
+    <stylesheets>
+        <URL value="@AnnualGraph.css" />
+    </stylesheets>
+</ScrollPane>

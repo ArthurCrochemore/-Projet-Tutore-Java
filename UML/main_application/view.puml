@@ -1,0 +1,78 @@
+@startuml View Main Application
+skinparam groupInheritance 2
+
+package view {
+    class ViewApplication
+    class ViewParameters {
+        port: int
+    }
+    class ViewConsultAll
+    class ViewConsultDay
+
+    ' CRUD (LCRUD)
+    package CRUD {
+        abstract class ViewCRUDListAbstract
+        abstract class ViewCRUDCreateAbstract
+        abstract class ViewCRUDDetailsAbstract
+        abstract class ViewCRUDUpdateAbstract
+        abstract class ViewCRUDDeleteAbstract
+    }
+
+    package department {
+        class ViewDepartmentList
+        class ViewDepartmentCreate
+        class ViewDepartmentDetails
+        class ViewDepartmentUpdate
+        class ViewDepartmentDelete
+    }
+
+    package employee {    
+        class ViewEmployeeList
+        class ViewEmployeeCreate
+        class ViewEmployeeDetails
+        class ViewEmployeeUpdate
+        class ViewEmployeeDelete
+    }
+
+    package punching {
+        class ViewPunchingList
+        class ViewPunchingCreate
+        class ViewPunchingDetails
+        class ViewPunchingUpdate
+        class ViewPunchingDelete
+    }
+
+    ' extends
+    department .....|> CRUD
+    employee .....|> CRUD
+    punching .....|> CRUD
+
+
+    ' going from one view to another
+    ViewApplication --> ViewParameters
+    ViewApplication --> ViewConsultAll
+    ViewApplication --> ViewConsultDay
+    ViewApplication ----> ViewDepartmentList
+    ViewApplication ----> ViewEmployeeList
+    ViewApplication ----> ViewPunchingList
+    ViewConsultDay ----> ViewPunchingDetails
+    ViewConsultAll ----> ViewPunchingDetails
+
+    ' List -> Create, Details
+    ViewDepartmentList --> ViewDepartmentCreate
+    ViewDepartmentList --> ViewDepartmentDetails
+    ViewEmployeeList --> ViewEmployeeCreate
+    ViewEmployeeList --> ViewEmployeeDetails
+    ViewPunchingList --> ViewPunchingCreate
+    ViewPunchingList --> ViewPunchingDetails
+    ' Details -> Update, Delete
+    ViewDepartmentDetails --> ViewDepartmentUpdate
+    ViewDepartmentDetails --> ViewDepartmentDelete
+    ViewEmployeeDetails --> ViewEmployeeUpdate
+    ViewEmployeeDetails --> ViewEmployeeDelete
+    ViewPunchingDetails --> ViewPunchingUpdate
+    ViewPunchingDetails --> ViewPunchingDelete
+
+    
+}
+@enduml

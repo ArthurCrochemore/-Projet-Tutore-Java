@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import fr.univtours.polytech.punchingmanagement.controller.TimeSpinner?>
+
+<BorderPane prefHeight="400" prefWidth="520"
+    xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="fr.univtours.polytech.punchingmanagement.controller.crud.PunchingCreateUpdateController"
+    fx:id="root">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+
+    <center>
+        <GridPane hgap="10" vgap="10">
+            <children>
+                <Label text="Employee" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label text="Date" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label text="Time entry" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label text="Time exit" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+
+                <ComboBox fx:id="employee" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <DatePicker fx:id="date" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TimeSpinner fx:id="timeEntry" GridPane.columnIndex="1" GridPane.rowIndex="3"
+                    editable="true" />
+                <TimeSpinner fx:id="timeExit" GridPane.columnIndex="1" GridPane.rowIndex="4"
+                    editable="true" />
+            </children>
+        </GridPane>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="10" />
+            </padding>
+            <children>
+                <Button fx:id="okButton" text="Create" />
+                <Button fx:id="cancelButton" text="Cancel" />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

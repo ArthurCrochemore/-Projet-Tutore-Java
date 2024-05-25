@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane prefHeight="200" prefWidth="320"
+    xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="fr.univtours.polytech.punchingmanagement.controller.crud.PunchingDeleteController"
+    fx:id="root">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+
+    <center>
+        <GridPane hgap="10" vgap="10">
+            <children>
+                <Label text="Are you sure you want to delete this punching ?"
+                    GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" />
+
+                <Label text="Employee" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label text="Date" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label text="Time entry" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label text="Time exit" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+
+                <Label fx:id="employee" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label fx:id="date" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label fx:id="timeEntry" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label fx:id="timeExit" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            </children>
+        </GridPane>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER">
+            <padding>
+                <Insets top="10" />
+            </padding>
+            <children>
+                <Button fx:id="deleteButton" text="Delete" />
+                <Button fx:id="cancelButton" text="Cancel" />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

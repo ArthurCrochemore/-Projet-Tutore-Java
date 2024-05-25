@@ -1,0 +1,40 @@
+.button {
+    -fx-font-weight: bold;
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 16px;
+    -fx-border-radius: 4px;
+}
+
+.button:hover {
+    -fx-background-color: #1976D2;
+}
+
+.text-field {
+    -fx-font-size: 14px;
+    -fx-pref-width: 180px;
+    -fx-background-color: white;
+    -fx-background-radius: 4px;
+    -fx-border-color: #BDBDBD;
+    -fx-border-radius: 4px;
+    -fx-padding: 4px;
+}
+
+.text-field:focused {
+    -fx-border-color: #2196F3;
+}
+
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2196F3;
+}
+
+.anchor-pane {
+    -fx-background-color: #F5F5F5;
+}
+
+.v-box {
+    -fx-spacing: 10px;
+    -fx-alignment: center;
+}

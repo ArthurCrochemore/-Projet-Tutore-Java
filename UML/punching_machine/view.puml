@@ -1,0 +1,16 @@
+@startuml View Punching Machine
+
+package view {
+    class ViewPunchingMachine {
+        userUUID: UUID
+    }
+
+    class ViewParamsPunchingMachine {
+        ip: string
+        port: int
+    }
+
+    ViewPunchingMachine --> ViewParamsPunchingMachine
+}
+
+@enduml
