@@ -1,6 +1,6 @@
-## Projet initialialement sur GitLab : https://gitlab.com/ArthurCrochemore2/projet-tutore-java
+_Projet initialialement sur GitLab : https://gitlab.com/ArthurCrochemore2/projet-tutore-java_
 
-_Réalisé par : Jerome Lecuyer, Alâa Chakori Semmane, Arthur Crochemor et Mickael Vital_
+_Réalisé par : Jerome Lecuyer, Alâa Chakori Semmane, Arthur Crochemore et Mickael Vital_
 
 ##
 
