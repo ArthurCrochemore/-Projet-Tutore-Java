@@ -1,8 +1,13 @@
+_## Projet initialialement sur GitLab : https://gitlab.com/ArthurCrochemore2/projet-tutore-java_
+
+_Réalisé par : Jerome Lecuyer, Alâa Chakori Semmane, Arthur Crochemor et Mickael Vital_
+
+##
 
 # Projet Tutore Java
 
 group MAAJ<br>
-Repo : https://gitlab.com/Sheerven/projet-tutore-java<br>
+Repo : https://gitlab.com/ArthurCrochemore2/projet-tutore-java<br>
 Video demo : https://youtu.be/rmrxzqgWFEc
 
 This project contains 2 applications :
@@ -64,3 +69,4 @@ cd ..
 - [PunchingCommon](Common/Javadoc/index.html)
 - [PunchingMachine](PunchingMachine/Javadoc/index.html)
 - [PunchingManagement](PunchingManagement/Javadoc/index.html)
+
